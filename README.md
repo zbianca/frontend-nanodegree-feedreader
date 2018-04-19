@@ -1,7 +1,5 @@
 # Feed Reader Testing Project
 
-> [Live demo](https://zbianca.github.io/jasmine-testing/index.html)
-
 This project is part of the Front-End Web Developer Nanodegree Program by [Udacity](https://www.udacity.com/).
 
 Students are given a web-based application that reads RSS feeds. The original developer included [Jasmine](http://jasmine.github.io/) and started writing their first test. The task is to complete the test suite. Optionally, the student can use a more recent version of Jasmine.
