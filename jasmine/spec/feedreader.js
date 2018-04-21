@@ -73,9 +73,7 @@ $(function () {
         describe('Initial Entries', function () {
 
             beforeEach(function (done) {
-                loadFeed(0, function () {
-                    done();
-                });
+                loadFeed(0, done);
             });
 
             /* Test that ensures when the loadFeed function is
@@ -100,7 +98,7 @@ $(function () {
             let feed2;
 
             beforeEach(function (done) {
-                loadFeed(0, function () {
+                loadFeed(0, () => {
                     feed1 = document.querySelector('h1').innerHTML;
                     done();
                 });
@@ -110,9 +108,9 @@ $(function () {
              * loadFeed function that the content actually changes.
              */
             it('loadFeed new content is updated', function (done) {
-                loadFeed(1, function () {
+                loadFeed(1, () => {
                     feed2 = document.querySelector('h1').innerHTML;
-                    expect(feed1 === feed2).toBeFalsy();
+                    expect(feed1).not.toEqual(feed2);
                     done();
                 });
             });
